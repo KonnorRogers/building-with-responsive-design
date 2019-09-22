@@ -1,0 +1,19 @@
+{
+  "name": "building-with-responsive-design",
+  "version": "1.0.0",
+  "description": "Rebuilding a responsive webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParamagicDev/building-with-responsive-design.git"
+  },
+  "author": "Konnor Rogers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ParamagicDev/building-with-responsive-design/issues"
+  },
+  "homepage": "https://github.com/ParamagicDev/building-with-responsive-design#readme"
+}
