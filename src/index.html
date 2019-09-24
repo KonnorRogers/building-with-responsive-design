@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Use google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- import font awesome -->
     <script
       src="https://kit.fontawesome.com/35f34fbec9.js"
       crossorigin="anonymous"
     ></script>
-    <title>TNW</title>
 
     <!-- Add TNW icon -->
     <link
@@ -17,19 +22,24 @@
       href="https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/icons/favicon-96x96.png?v=1568105532"
       sizes="96x96"
     />
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>TNW</title>
   </head>
   <body>
     <nav class="secondary-nav">
       <div class="nav-left">
         <a href="">News</a>
-        <a href="" data-behavior="dropdown">
-          Events
-          <i class="fas fa-caret-down"></i>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Events
+            <i class="fas fa-caret-down"></i>
+          </button>
           <ul class="dropdown-content">
             <li class="dropdown-item"><a>Hard Fork Summit</a></li>
             <li class="dropdown-item"><a>TNW2020</a></li>
           </ul>
-        </a>
+        </div>
         <a href="" data-behavior="dropdown">
           Business
           <i class="fas fa-caret-down"></i>
