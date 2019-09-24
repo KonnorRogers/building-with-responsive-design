@@ -1,6 +1,7 @@
+/* site wide */
 body {
   color: black;
-  font: normal 14px/1.5 'Big Shoulders Display', Helvetica, sans-serif;
+  font: normal 14px/1.5 'Roboto Mono', monospace;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,6 +10,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -59,24 +65,71 @@ nav {
 /* primary nav */
 
 .primary-nav {
+  justify-content: space-between;
   position: fixed;
-  top: 4.5vh;
-  height: 6vh;
-  background: gray;
+  height: 7vh;
+  padding: 0 0.8rem;
 }
 
 .primary-nav > * {
-  width: 5%;
+  padding: 0.8rem 0.5rem;
   font-style: uppercase;
 }
 
+.primary-nav a {
+  color: gray;
+  opacity: 0.7;
+  font: normal 14px/1.8 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  text-align: center;
+  word-spacing: 0.25px;
+  letter-spacing: 1px;
+}
+
+.primary-nav a:hover {
+  color: black;
+  opacity: 1;
+}
+
 .primary-nav > .search {
+  font-size: 15px;
+  opacity: 0.7;
+  color: gray;
   margin-left: auto;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  border-left: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 .search {
   text-align: right;
   padding-right: 1rem;
+}
+
+.search:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  color: gray;
+}
+
+.nav-message {
+  display: flex;
+  position: fixed;
+  font-size: 12px;
+  font-weight: 400;
+  align-items: center;
+  margin-top: 6.7vh;
+  padding: 0.5rem;
+  padding-left: 0.8rem;
+  height: 1.5vh;
+  width: 100vw;
+  background: #ffdd33;
+  cursor: pointer;
+}
+
+.nav-message .arrow {
+  padding-left: 0.5rem;
 }
 
 /* dropdowns */
@@ -117,6 +170,31 @@ nav {
 /* Change color of dropdown links on hover */
 .dropdown-item:hover {
   color: white;
+}
+
+/* header */
+
+header {
+  display: flex;
+  margin: 0.2rem;
+  height: 80vh;
+  background: white;
+}
+
+.picture-one {
+  width: 65%;
+  height: 100%;
+}
+
+.picture-two,
+.picture-three {
+  width: 32%;
+  height: 48%;
+}
+
+/* main content */
+
+main {
 }
 
 @media screen and (min-width: 768px) {
