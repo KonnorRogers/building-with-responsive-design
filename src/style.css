@@ -127,6 +127,7 @@ main {
     color: #a5a5a5;
     background: black;
     position: relative;
+    display: flex;
     height: 4.5vh;
     margin: 0;
     width: 100%;
