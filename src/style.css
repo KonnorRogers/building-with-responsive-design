@@ -37,34 +37,8 @@ nav {
   width: 100%;
 }
 
-/* secondary nav */
 .secondary-nav {
-  font: normal 13px/1.5 sans-serif;
-  color: #a5a5a5;
-  background: black;
-  position: relative;
-  height: 4.5vh;
-  margin: 0;
-  width: 100%;
-}
-
-.secondary-nav a,
-.secondary-nav button {
-  padding: 0.25rem;
-}
-
-.secondary-nav a:hover,
-.secondary-nav button:hover {
-  color: white;
-}
-
-.secondary-nav .nav-left {
-  margin-left: 1rem;
-  margin-right: auto;
-}
-
-.secondary-nav .nav-right {
-  margin-right: 1rem;
+  display: none;
 }
 
 /* primary nav */
@@ -141,66 +115,205 @@ nav {
   padding-left: 0.5rem;
 }
 
-/* dropdowns */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  background: black;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown:focus .dropdown-content,
-.dropdown:active .dropdown-content {
-  display: block;
-}
-
-.dropdown-item {
-  cursor: pointer;
-  color: inherit;
-  background: black;
-  text-decoration: none;
-  display: block;
-  margin: 0.25rem 0.7rem;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-item:hover {
-  color: white;
-}
-
-/* header */
-header {
-  /* display: grid; */
-  background: white;
-  height: 90vh;
-}
-
-.picture-one {
-  margin-top: 0.2rem;
-  background: no-repeat center / contain
-    url('https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F09%2FMacAirDeal.png&signature=3775eadd41c0a6d458f55d13da6b9286');
-  width: 66%;
-  height: 80%;
-  display: inline-block;
-}
-
 /* main content */
 
 main {
 }
 
 @media screen and (min-width: 768px) {
-  /* remove hamburger */
+  /* secondary nav */
+  .secondary-nav {
+    font: normal 13px/1.5 sans-serif;
+    color: #a5a5a5;
+    background: black;
+    position: relative;
+    height: 4.5vh;
+    margin: 0;
+    width: 100%;
+  }
+
+  .secondary-nav a,
+  .secondary-nav button {
+    padding: 0.25rem;
+  }
+
+  .secondary-nav a:hover,
+  .secondary-nav button:hover {
+    color: white;
+  }
+
+  .secondary-nav .nav-left {
+    margin-left: 1rem;
+    margin-right: auto;
+  }
+
+  .secondary-nav .nav-right {
+    margin-right: 1rem;
+  }
+  /* dropdowns */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    background: black;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus .dropdown-content,
+  .dropdown:active .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-item {
+    cursor: pointer;
+    color: inherit;
+    background: black;
+    text-decoration: none;
+    display: block;
+    margin: 0.25rem 0.7rem;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-item:hover {
+    color: white;
+  }
+  /* header */
+  header.header-pictures {
+    margin-top: 0.2rem;
+    display: flex;
+    background: white;
+    margin-top: 10vh;
+    height: 65vh;
+    margin-bottom: 15vh;
+    cursor: pointer;
+  }
+
+  .picture-one {
+    color: white;
+    height: 100%;
+    width: 66%;
+    height: auto;
+    opacity: 0.85;
+    margin-right: 0.5rem;
+    background: no-repeat 50% / cover
+      url('https://web.archive.org/web/20190925190407oe_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/Ubisoft-Concordia-796x417.jpg');
+  }
+
+  .picture-one * {
+    opacity: 1;
+  }
+
+  .picture-one .date,
+  .picture-two .date,
+  .picture-three .date {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+
+  .picture-one,
+  .picture-two,
+  .picture-three {
+    position: relative;
+  }
+
+  .picture-one .gradient,
+  .picture-two .gradient,
+  .picture-three .gradient:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    background: linear-gradient(to top, black, rgba(50, 50, 50, 0.9));
+    z-index: -1;
+  }
+
+  .picture-one .description,
+  .picture-two .description,
+  .picture-three .description {
+    position: absolute;
+    left: 1rem;
+    bottom: 5px;
+  }
+
+  .picture-one h2,
+  .picture-two h2,
+  .picture-three h2 {
+    margin: 0.5rem 0;
+    padding: 0;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+
+  .picture-two h2,
+  .picture-three h2 {
+    font-size: 1.5rem;
+  }
+
+  .picture-one .credit,
+  .picture-two .credit,
+  .picture-three .credit {
+    color: gray;
+  }
+
+  .secondary-pictures {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 33%;
+  }
+
+  .picture-two {
+    width: 100%;
+    height: 48%;
+    margin-bottom: 1%;
+    background: no-repeat 50% / cover
+      url('https://web.archive.org/web/20190925190407oe_/https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/Snag_4664224c-796x415.png');
+    opacity: 0.85;
+  }
+
+  .picture-three {
+    background: no-repeat 50% / cover
+      url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/vodablockchain-796x448.jpg');
+    height: 50.5%;
+    opacity: 0.85;
+  }
+
+  .picture-one:hover,
+  .picture-three:hover,
+  .picture-two:hover {
+    transition: all ease-in 0.4s;
+    opacity: 0.95;
+  }
+
+  .picture-one-h1 {
+    padding-left: 1rem;
+    font-style: italic;
+    display: inline;
+    font-size: 8rem;
+  }
+
+  .picture-two .description,
+  .picture-three .description {
+    position: absolute;
+    color: white;
+  }
+
+  .picture-two .credit,
+  .picture-three .credit {
+    color: gray;
+  }
 }
